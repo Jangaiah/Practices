@@ -1,0 +1,32 @@
+
+<h1>Javascript Inheritance</h1>
+<script>
+"use strict";
+
+/* ***
+*** Status : Inheritance below is not working
+*/
+
+var Vehicle=function(){
+	this.name = "Vehicle";
+	this.length=200;
+	//this.drive=function(){alert(this.name+" is Moving");};
+}
+
+var LMV=function(){
+	this.name = "LMV";
+	//this.drive = function(){alert(this.name+" is Moving");};
+}
+
+LMV.prototype = Object.create(Vehicle.prototype);
+
+var lmv=new LMV();
+
+window.addEventListener("load",function(){
+alert("window 1");
+alert(lmv.length);
+});
+
+
+
+</script>

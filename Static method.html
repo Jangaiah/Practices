@@ -1,0 +1,28 @@
+<h1>Javascript Static Method</h1>
+
+<script>
+
+/*******************
+**** Status :  As below two ways static method can be defined.
+***/
+
+
+/*class Parent{
+	static display(){
+		alert("Yes static is working");
+	}
+	function getMe(){return "Yes Me";}
+}*/
+
+function Parent(){}
+
+Parent.display = function(){alert("Static without static keyword");};
+
+window.addEventListener("load",function(){
+	var p = new Parent();
+	//alert("Public function"+p.getMe());
+	Parent.display();
+	//alert("Loading window");
+});
+
+</script>
